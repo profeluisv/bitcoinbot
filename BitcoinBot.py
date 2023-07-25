@@ -1,39 +1,17 @@
-# Importaciones estándar
-import datetime
-import json
-import os
-import threading
-
-# Importaciones de terceros
-import asyncio
-import cryptocompare
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import matplotlib.dates as mdates
-import pandas as pd
-import plotly.graph_objects as go
-import pytz
-from pytz import timezone
-from PIL import Image
-import qrcode
-import re
-import requests
-import telebot
-from telebot import types
-from tabulate import tabulate
-
-# Otras importaciones
-from datetime import datetime
-import html
-import io
-import markdown
-import tempfile
-from io import BytesIO
-from prettytable import PrettyTable
-import time
-import schedule
+cryptocompare
+matplotlib==3.4.3
+plotly
+telebot
+tabulate
+schedule
+requests
+datetime
+pytz
+prettytable
+markdown
+qrcode
+Pillow
+pandas
 
 # Configurar el bot de Telegram (JarvisBTC)
 bot_token = os.getenv('BOT_TOKEN')
@@ -723,9 +701,6 @@ def get_daily_price(symbol):
     message = message.replace('*', '\\*').replace('_', '\\_').replace('<', '\\<').replace('>', '\\>').replace('`', '\\`')
 
     return message
-
-# Eliminar el webhook antes de iniciar el polling
-bot.delete_webhook()
 
 # Iniciar el bot de Telegram con polling infinito
 bot.infinity_polling()
