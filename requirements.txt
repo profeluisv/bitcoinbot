@@ -8,7 +8,6 @@ requests
 datetime
 pytz
 prettytable
-html
 markdown
 qrcode
 Pillow
