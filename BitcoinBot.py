@@ -36,7 +36,7 @@ import time
 import schedule
 
 # Configurar el bot de Telegram (JarvisBTC)
-bot_token = '6353129832:AAG8-IpoEkdHJe5uLcnJoJ7T_NN2Io_e9CM'  # Reemplaza con el token de acceso de tu bot de Telegram  # ID del propietario del bot
+bot_token = os.getenv('BOT_TOKEN')
 
 # Crear instancia del bot
 bot = telebot.TeleBot(bot_token)
