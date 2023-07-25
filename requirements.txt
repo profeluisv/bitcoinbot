@@ -3,7 +3,15 @@ matplotlib==3.4.3
 plotly
 telebot
 tabulate
+time
+schedule
 requests
+datetime
 pytz
 prettytable
+re
+html
+markdown
+qrcode
 Pillow
+pandas
