@@ -724,5 +724,8 @@ def get_daily_price(symbol):
 
     return message
 
+# Eliminar el webhook antes de iniciar el polling
+bot.delete_webhook()
+
 # Iniciar el bot de Telegram con polling infinito
 bot.infinity_polling()
