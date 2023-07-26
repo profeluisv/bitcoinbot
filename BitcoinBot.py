@@ -36,7 +36,7 @@ import time
 import schedule
 
 # Configurar el bot de Telegram (JarvisBTC)
-bot_token = os.getenv('BOT_TOKEN')
+bot_token = os.environ['TELEGRAM_BOT_TOKEN']
 
 # Crear instancia del bot
 bot = telebot.TeleBot(bot_token)
@@ -723,6 +723,9 @@ def get_daily_price(symbol):
     message = message.replace('*', '\\*').replace('_', '\\_').replace('<', '\\<').replace('>', '\\>').replace('`', '\\`')
 
     return message
+
+# Eliminar el webhook antes de iniciar el polling
+bot.delete_webhook()
 
 # Iniciar el bot de Telegram con polling infinito
 bot.infinity_polling()
